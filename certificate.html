@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Employee Salary & Separation Calculator</title>
+  <meta name="" content="">
+  <meta name="" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+    
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&family=Pacifico&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    
+ 
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    color: #222;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 1.35rem;
+    color: #1e3a8a;
+    user-select: none;
+    margin-bottom: 15px;
+  }
+      
+  .container {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+     padding-top: 100px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+    padding: 18px 22px 28px 22px;
+    flex: 1 1 320px;
+    max-width: 460px;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+  }
+  .field-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+  }
+  label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #334155;
+    margin-bottom: 6px;
+    user-select: none;
+  }
+  input[type="number"],
+  input[type="date"],
+  select {
+    padding: 8px 10px;
+    font-size: 1rem;
+    border: 1.6px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: monospace;
+    color: #0f172a;
+    text-align: right;
+    transition: border-color 0.2s ease;
+  }
+  input[type="number"]:focus,
+  input[type="date"]:focus,
+  select:focus {
+    border-color: #2563eb;
+    outline: none;
+  }
+  input[readonly] {
+    background-color: #e0e7ff;
+    border-color: #a5b4fc;
+    font-weight: 700;
+    cursor: not-allowed;
+    color: #1e40af;
+  }
+  .house-rent-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .house-rent-container input[type="number"] {
+    flex: 1 1 60px;
+    min-width: 50px;
+    text-align: right;
+  }
+    body {
+      background: #e6e6e6;
+      font-family: 'Poppins', sans-serif;
+        
+    }
+
+    .certificate {
+      max-width: 1100px;
+      width: 100%;
+      min-height: 650px;
+      margin: 20px auto;
+      background: linear-gradient(90deg, #dcdcdc, #f4f4f4);
+      padding: clamp(20px, 4vw, 60px);
+      position: relative;
+      overflow: hidden;
+        background-image: url("assets/img/bg.png");
+    }
+
+    /* Gold wave graphics */
+    .wave {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle at center, rgba(212,175,55,0.35), transparent 70%);
+      border-radius: 50%;
+      filter: blur(2px);
+    }
+
+    .wave.left {
+      top: -120px;
+      left: -120px;
+    }
+
+    .wave.right {
+      bottom: -120px;
+      right: -120px;
+    }
+
+    /* Header */
+    .logo img {
+      width: 60px;
+      }
+     
+    .brand-name {
+      font-weight: 600;
+      color: #e53935;
+    }
+
+    }
+      .certificate_logo{
+          background-image: url("assets/img/logo.png");
+      }
+    /* Title */
+    .title h1 {
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 6px;
+      font-size: clamp(28px, 6vw, 48px);
+      margin: 0;
+    }
+
+    .title h2 {
+      margin-top: 10px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      font-size: clamp(16px, 3vw, 22px);
+    }
+
+    /* Name */
+    .recipient-name {
+      font-family: 'Pacifico', cursive;
+      font-size: clamp(26px, 6vw, 48px);
+      margin: 20px 0;
+    }
+
+    /* Footer */
+    .signature-line {
+      height: 1px;
+      background: #000;
+      margin-bottom: 8px;
+    }
+
+    .website {
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .text-end {
+        text-align: left !important;
+      }
+      .qr {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .certificate {
+        padding: 20px 16px;
+      }
+      .title h1 {
+        letter-spacing: 3px;
+      }
+      .row > div {
+        margin-bottom: 24px;
+      }
+      .brand-name {
+        font-size: 14px;
+      }
+    }
+      .signature-line {
+        margin-top: 20px;
+      }
+    }
+  </style>
+    
+    
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top" style="background-color: #000910">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center" >
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/logo.jpg" alt="" >
+          <h1><span class="red">S</span>kill<span class="red">N</span>ext BD</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="#" class="active">Certificate</a>      
+          </li>
+          </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Action Buttons -->
+  <!-- Action Buttons -->
+  <div class="container text-end mt-3">
+    <button class="btn btn-outline-secondary me-2" onclick="window.print()">🖨 Print</button>
+    <button class="btn btn-outline-dark" onclick="downloadPDF()">⬇ Download PDF</button>
+  </div>
+
+  <div class="certificate shadow">
+    <!-- Decorative Waves -->
+    <div class="wave left"></div>
+    <div class="wave right"></div>
+
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-start">
+      <div class="d-flex align-items-center gap-2">
+        <img src="assets/img/logo.png" style="width: 70px;" alt="SkillNext BD"/>
+        <h4><span class="red">S</span>kill<span class="red">N</span>ext BD</h4>
+      </div>
+      <div class="text-end small">
+        <div><strong>CERTIFICATE NO:</strong> SN/104125</div>
+        <div><strong>ISSUE DATE:</strong> 23/07/2025</div>
+        <div class="qr mt-2">
+          <img src="assets/img/QR.png"></div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="text-center title mt-1">
+      <h1>CERTIFICATE</h1>
+      <h2>OF APPRECIATION</h2>
+    </div>
+
+    <!-- Content -->
+    <div class="text-center mt-4 fs-5">
+      <p class="mb-1">IS PRESENTED TO:</p>
+      <div class="recipient-name">Khadijatul Champa</div>
+      <p class="mx-auto" style="max-width:700px; line-height:1.6;">
+        For active participation in 2 Days Long online training on<br>
+        <strong>“Welfare Management: Policy to Practice”</strong>,<br>
+        held on 19<sup>th</sup> July & 20<sup>th</sup> July, 2025.
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="row text-center w-100 px-3 px-md-5 mt-5">
+      <div class="col-4">
+        <div class="signature-line"></div>
+        Name of the Coordinator<br>Course Coordinator<br>L&D Operations
+      </div>
+      <div class="col-4">
+        <div class="signature-line"></div>
+        Name of the Director<br>Director Finance & Marketing
+      </div>
+      <div class="col-4">
+        <div class="signature-line"></div>
+        Name<br>Facilitator
+      </div>
+    </div>
+
+    <div class="website mt-4">Visit our Website: www.skillnextbd.com</div>
+  </div>
+    
+ 
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/logo.jpg" alt="" >
+          <h3 style="color: aliceblue;"><span style="color: red;">S</span>kill<span style="color: red;">N</span>ext BD</h3>
+      </a>
+          <div class="footer-contact pt-3">
+            <p>Dhaka, Bangladesh</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+88 01 647 477992</span></p>
+            <p class="mt-3"><strong>WhatsApp:</strong> <span>+88 01 716 873977</span></p>  
+            <p><strong>Email:</strong> <span>skillnextbdinfo@gmail.com</span></p>
+          </div>
+          
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#hero">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#registration">Registration</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="salarycalculator.html">Salary Calculator</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#contact">contact</a></li>
+          </ul>
+            
+        </div>
+
+       
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+            
+            <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61551550327667" target="_blank" ><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+            
+        </div>
+
+      </div>
+    </div>
+    
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright, 2025</span> <strong class="px-1 sitename"><a href="index.html" class="blue">SkillNextBD</a></strong> <span>All Rights Reserved</span></p>
+      
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"> </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <script>
+    function downloadPDF() {
+      const element = document.querySelector('.certificate');
+      const opt = {
+        margin: 0.3,
+        filename: 'certificate.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' }
+      };
+      html2pdf().set(opt).from(element).save();
+    }
+  </script>
+    
+    
+   
+
+</body>
+
+</html>
